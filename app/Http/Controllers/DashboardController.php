@@ -11,11 +11,10 @@ class DashboardController extends Controller
     public function index()
     {
         $totalDebitAir = SensorData::sum('waterflow_rate');
-
-        $jumlahPemakaian = floor($totalDebitAir / 600);
-        $hargaSatuanPDAM = 250000;
+        
+        $jumlahPemakaian = floor($totalDebitAir / 2310);
+        $hargaSatuanPDAM = 59;
         $totalTagihan = ($totalDebitAir / 1000) * $hargaSatuanPDAM;
-
         $formattedTagihan = $this->formatRupiah($totalTagihan);
 
         return view('pages.dashboard', compact('totalDebitAir', 'jumlahPemakaian', 'formattedTagihan'));
