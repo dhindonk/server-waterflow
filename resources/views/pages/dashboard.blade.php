@@ -60,7 +60,7 @@
                             </div>
                             <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
                                 <span style="color: #333">
-                                    IDR.{{ $formattedTagihan ?? 0 }}
+                                    {{ $formattedTagihan ?? 0 }}
                                 </span>
                             </div>
                         </div>
