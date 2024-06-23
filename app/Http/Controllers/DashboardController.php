@@ -12,7 +12,7 @@ class DashboardController extends Controller
     {
         $totalDebitAir = SensorData::sum('waterflow_rate');
         
-        $jumlahPemakaian = floor($totalDebitAir / 2310);
+        $jumlahPemakaian = $totalDebitAir / 2.31;
         $hargaSatuanPDAM = 59;
         $totalTagihan = ($totalDebitAir / 1000) * $hargaSatuanPDAM;
         $formattedTagihan = $this->formatRupiah($totalTagihan);

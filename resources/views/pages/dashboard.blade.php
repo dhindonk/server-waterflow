@@ -26,7 +26,7 @@
                             </div>
                             <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
                                 <span style="color: #333">
-                                    {{ $totalDebitAir ?? 150 }} (ml)
+                                    {{ $totalDebitAir ?? 150 }} (Liter)
                                 </span>
                             </div>
                         </div>
