@@ -9,66 +9,66 @@
 @endpush
 
 @section('main')
-<div class="main-content">
-    <section class="section">
-        <div class="section-header">
-            <h1>Sistem Monitoring Wudhu Otomatis [ Fauzan Yuliansah Irawan ]</h1>
-        </div>  
-        <div class="row" style="display: flex; justify-content: center !important">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card p-3 d-flex justify-center align-items-center">
-                    <div class="card-icon pt-5">
-                        <img src="{{ asset('assets/water.png') }}" alt="" width="100">
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h3>Total Debit Air</h3>
+    <div class="main-content">
+        <section class="section">
+            <div class="section-header">
+                <h1>Sistem Monitoring Wudhu Otomatis [ Fauzan Yuliansah Irawan ]</h1>
+            </div>
+            <div class="row" style="display: flex; justify-content: center !important">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="card p-3 d-flex justify-center align-items-center">
+                        <div class="card-icon pt-5">
+                            <img src="{{ asset('assets/water.png') }}" alt="" width="100">
                         </div>
-                        <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
-                            <span style="color: #333">
-                                {{ number_format($totalDebitAir / 1000, 2) }} (Liter)
-                            </span>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h3>Total Debit Air</h3>
+                            </div>
+                            <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
+                                <span style="color: #333">
+                                    {{ number_format($totalDebitAir / 1000, 2) }} (Liter)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="card p-3 d-flex justify-center align-items-center">
+                        <div class="card-icon pt-5">
+                            <img src="{{ asset('assets/group.png') }}" alt="" width="100">
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h3>Total Pemakaian</h3>
+                            </div>
+                            <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
+                                <span style="color: #333">
+                                    {{ number_format($jumlahPemakaian, 0) }} (orang)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="card p-3 d-flex justify-center align-items-center">
+                        <div class="card-icon pt-5">
+                            <img src="{{ asset('assets/money.png') }}" alt="" width="100">
+                        </div>
+                        <div class="card-wrap">
+                            <div class="card-header">
+                                <h3>Total Tagihan</h3>
+                            </div>
+                            <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
+                                <span style="color: #333">
+                                    {{ $formattedTagihan }}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card p-3 d-flex justify-center align-items-center">
-                    <div class="card-icon pt-5">
-                        <img src="{{ asset('assets/group.png') }}" alt="" width="100">
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h3>Total Pemakaian</h3>
-                        </div>
-                        <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
-                            <span style="color: #333">
-                                {{ number_format($jumlahPemakaian, 2) }} (orang)
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card p-3 d-flex justify-center align-items-center">
-                    <div class="card-icon pt-5">
-                        <img src="{{ asset('assets/money.png') }}" alt="" width="100">
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h3>Total Tagihan</h3>
-                        </div>
-                        <div class="card p-2 d-flex justify-center align-items-center" style="background: #eee">
-                            <span style="color: #333">
-                                {{ $formattedTagihan }}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 @endsection
 
 @push('scripts')
