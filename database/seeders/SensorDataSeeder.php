@@ -14,16 +14,16 @@ class SensorDataSeeder extends Seeder
     public function run(): void
     {
         $sensorData = [
-            ['waterflow_rate' => 1.8],
-            ['waterflow_rate' => 2.3],
-            ['waterflow_rate' => 2.0],
-            ['waterflow_rate' => 3.0],
-            ['waterflow_rate' => 2.4],
-            ['waterflow_rate' => 2.0],
-            ['waterflow_rate' => 1.9],
-            ['waterflow_rate' => 2.3],
-            ['waterflow_rate' => 2.4],
-            ['waterflow_rate' => 3.0],
+            ['waterflow_rate' => 1800], // 1.8 Liter
+            ['waterflow_rate' => 2300], // 2.3 Liter
+            ['waterflow_rate' => 2000], // 2.0 Liter
+            ['waterflow_rate' => 3000], // 3.0 Liter
+            ['waterflow_rate' => 2400], // 2.4 Liter
+            ['waterflow_rate' => 2000], // 2.0 Liter
+            ['waterflow_rate' => 1900], // 1.9 Liter
+            ['waterflow_rate' => 2300], // 2.3 Liter
+            ['waterflow_rate' => 2400], // 2.4 Liter
+            ['waterflow_rate' => 3000], // 3.0 Liter
         ];
 
         foreach ($sensorData as $data) {

@@ -12,9 +12,16 @@ class DashboardController extends Controller
     {
         $totalDebitAir = SensorData::sum('waterflow_rate');
         
-        $jumlahPemakaian = $totalDebitAir / 2.31;
-        $hargaSatuanPDAM = 59;
+        // Menghitung jumlah pemakaian berdasarkan asumsi
+        $jumlahPemakaian = $totalDebitAir / 2310; // Misalnya, 2310 ml = 1 pemakaian
+
+        // Harga satuan dalam rupiah per liter
+        $hargaSatuanPDAM = 59; // 59 Rupiah per liter
+
+        // Menghitung total tagihan
         $totalTagihan = ($totalDebitAir / 1000) * $hargaSatuanPDAM;
+
+        // Format tagihan ke dalam bentuk rupiah
         $formattedTagihan = $this->formatRupiah($totalTagihan);
 
         return view('pages.dashboard', compact('totalDebitAir', 'jumlahPemakaian', 'formattedTagihan'));
